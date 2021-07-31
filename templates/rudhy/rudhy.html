@@ -18,28 +18,40 @@
 
 <style>
     .divInicial{
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 1rem;
     background-image: url(/templates/rudhy/assets/img/banner02.png);
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: cover;
     background-position: 100%;
     }
 
     .h1Principal{
         font-size: 60px;
         color: #ffffff;
-        text-shadow: 2px 2px 5px red;
+        text-shadow: 2px 2px 10px rgb(0, 47, 255);
     }
 
     .divprincipalbg{
-        margin-top: 3rem;
-        background: rgba(241, 241, 223, 0.65);
+        margin: 1vw;
+        padding: 0.05rem;
+        background: rgba(241, 241, 223, 0.7);
         border-radius: 12px;
     }
     .estiloTextoDivPrincipal{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 2rem;
+        text-align: justify;
         color: rgb(22, 20, 20); 
         font-weight: bold; 
-        text-shadow: 0px 0px 5px rgb(255, 255, 255);
+        text-shadow: 0px 0px 10px rgb(8, 5, 0);
+    }
+
+    .bg-principal{
+        background-image: url(/templates/rudhy/assets/img/fundo01.gif);
     }
 
 </style>
@@ -84,15 +96,15 @@
     
 
     <section class="jumbotron text-center divInicial">
-        <div class="container">
+        <!-- <div class="container"> -->
             
         <h1 class="h1Principal">Catálogo de Animes</h1>
-            <div class="divprincipalbg">
+            <div class="divprincipalbg" >
                 <p class="lead estiloTextoDivPrincipal" >Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
-    <div class="album py-5 bg-light" id="rudhy">
+    <div class="album bg-principal" id="rudhy">
         <div class="container">
 
         <div class="row">
