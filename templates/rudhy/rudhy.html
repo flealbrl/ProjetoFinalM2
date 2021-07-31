@@ -14,7 +14,32 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- ------------------------Estilos fora do bootstrap------------------------- -->
 
+<style>
+    .divInicial{
+    background-image: url(../rudhy/assets/img/Animes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .h1Principal{
+        color: #ffffff;
+    }
+
+    .divprincipalbg{
+        background: rgba(241, 241, 223, 0.459);
+        border-radius: 12px;
+    }
+    .estiloTextoDivPrincipal{
+        color: rgb(22, 20, 20); 
+        font-weight: bold; 
+        text-shadow: 0px 0px 5px rgb(11, 255, 64);
+    }
+    
+</style>
+
+<!-- ------------------------FIM do Estilos dentro do bootstrap------------------->
 </head>
 
 <body>
@@ -50,20 +75,15 @@
         </ul>
         </div>
     </nav>
-    <!-- -------------------------------------------- -->
+    
+    
 
-    <!-- -------------------------------------------- -->
-
-
-    <section class="jumbotron text-center" style="background-image: url(../rudhy/assets/img/Animes.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;">
+    <section class="jumbotron text-center divInicial">
         <div class="container">
             
-        <h1 style="color: #fff; ">Catálogo de Animes</h1>
-            <div style="background: rgba(241, 241, 223, 0.459);
-            border-radius: 12px;">
-                <p class="lead" style="color: rgb(22, 20, 20); font-weight: bold; text-shadow: 0px 0px 5px rgb(11, 255, 64);">Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
+        <h1 class="h1Principal">Catálogo de Animes</h1>
+            <div class="divprincipalbg">
+                <p class="lead estiloTextoDivPrincipal" >Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
             </div>
         </div>
     </section>
