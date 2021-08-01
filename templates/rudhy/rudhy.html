@@ -14,10 +14,65 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- ------------------------Estilos fora do bootstrap------------------------- -->
+
+<style>
+    .divInicial{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 1rem;
+    background-image: url(/templates/rudhy/assets/img/Animes03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    }
+
+    .h1Principal{
+        font-size: 60px;
+        color: #ffffff;
+        text-shadow: 2px 2px 10px rgb(0, 47, 255);
+    }
+
+    .divprincipalbg{        
+        padding: 0.05rem;
+        background: rgba(241, 241, 223, 0.7);
+        border-radius: 12px;
+    }
+    .estiloTextoDivPrincipal{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        text-align: justify;
+        color: rgb(22, 20, 20); 
+        font-weight: bold; 
+        text-shadow: 0px 0px 10px rgb(8, 5, 0);
+    }
+
+    .bg-principal{
+        padding: 2rem;
+        background-image: url(/templates/rudhy/assets/img/fundo12.gif);
+        background-size: cover;
+        background-position: center;
+    }
+
+</style>
+
+<!-- ------------------------FIM do Estilos fora do bootstrap------------------->
 
 </head>
 
 <body>
+    <!-- ----------------------------Audio de fundo--------------------------------- -->
+
+    <audio autoplay loop=infinite>
+        
+        <source src="/templates/rudhy/assets/sound/CocoRosie - Fairy Paradise Cutted.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- ----------------------------FIM do Audio de fundo--------------------------------- -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Rudhy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,59 +105,64 @@
         </ul>
         </div>
     </nav>
-    <section class="jumbotron text-center">
-        <div class="container">
+    
+    
+
+    <section class="jumbotron text-center divInicial">
+        <!-- <div class="container"> -->
             
-        <h1>Catálogo de Animes</h1>
-        <p class="lead text-muted bgi-url(https://s.aficionados.com.br/imagens/os-25-animes-mais-assistidos-no-mundo-ate-agora_f.jpg)">Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
-        </div>
+        <h1 class="h1Principal">Catálogo de Animes</h1>
+            <div class="divprincipalbg" >
+                <p class="lead estiloTextoDivPrincipal" >Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
+            </div>
+        <!-- </div> -->
     </section>
-    <div class="album py-5 bg-light" id="rudhy">
+    <div class="album bg-principal" id="rudhy">
         <div class="container">
 
         <div class="row">
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../rudhy/assets/img/Gintama.jpg" data-holder-rendered="true">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 230px; width: 100%; display: block;" src="../rudhy/assets/img/Gintama.jpg">
                 <div class="card-body">
                 <p class="card-text">GINTAMA é um anime pipipi pópópó...</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
             </div>
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../rudhy/assets/img/Mushishi.jpg">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 230px; width: 100%; display: block;" src="../rudhy/assets/img/Mushishi.jpg">
                 <div class="card-body">
-                <p class="card-text"></p>
+                
                 <p class="card-text">MUSHISHI é foda pra caraleo!!!</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
             </div>
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../rudhy/assets/img/Natsume Yuujinchou.jpg">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 230px; width: 100%; display: block;" src="../rudhy/assets/img/Natsume Yuujinchou02.jpg">
                 <div class="card-body">
                 <p class="card-text">Natsume Yuujinchou.PHOOOODA!</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
@@ -110,48 +170,54 @@
 
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../rudhy/assets/img/Mononoke.jpg">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 230px; width: 100%; display: block;" src="../rudhy/assets/img/Mononoke.jpg">
                 <div class="card-body">
                 <p class="card-text">MONONOKE, Sem palavras</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
             </div>
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../rudhy/assets/img/Uchouten Kazoku.jpg">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 250px; width: 100%; display: block;" src="../rudhy/assets/img/Uchouten Kazoku.jpg">
                 <div class="card-body">
                 <p class="card-text">UCHOUTEN KAZOKU</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
             </div>
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../rudhy/assets/img/Kimetsu no Yaiba.jpg">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 230px; width: 100%; display: block;" src="../rudhy/assets/img/Kimetsu no Yaiba.jpg">
                 <div class="card-body">
                 <p class="card-text">KIMESTU NO YAIBA</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    
                 </div>
                 </div>
             </div>
             </div>
 </body>
+<footer class="blog-footer">
+    <p>Criado por &copy <a href="https://github.com/RudhyDev" target="_blanck" >RudhyDev</a>
+    <p>
+    <a href="#">Voltar ao topo</a>
+    </p>
+</footer>
 </html>
