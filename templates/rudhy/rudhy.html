@@ -56,6 +56,13 @@
         background-position: center;
     }
 
+    .soundbar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .
+
 </style>
 
 <!-- ------------------------FIM do Estilos fora do bootstrap------------------->
@@ -63,18 +70,10 @@
 </head>
 
 <body>
-    <!-- ----------------------------Audio de fundo--------------------------------- -->
 
-    <audio autoplay loop=infinite>
-        
-        <source src="/templates/rudhy/assets/sound/CocoRosie - Fairy Paradise Cutted.wav" type="audio/wav">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- ----------------------------FIM do Audio de fundo--------------------------------- -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Rudhy</a>
+        <a class="navbar-brand" href="/templates/rudhy/rudhy.html">Rudhy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -107,6 +106,7 @@
     </nav>
     
     
+    
 
     <section class="jumbotron text-center divInicial">
         <!-- <div class="container"> -->
@@ -116,9 +116,29 @@
                 <p class="lead estiloTextoDivPrincipal" >Seja bem-vindo/a ao meu catálogo de animes japoneses. Aqui estão algumas recomendações minhas de animes, que para a galera que nasceu a partir de 2000 podem ser considerados completamente "Cringe", porém são obras de arte puras. Tirando Demon Slayer, todos os outros animes possuem uma pegada mais filosófica, xamânica e retratam um pouco mais afundo a mitologia e folclore tradicional japonês, ou seja, os personagens estão envoltos no universo da filosofia Shintoista, com muitos Youkais, Kamis, Yureis e muito mais.  </p>
             </div>
         <!-- </div> -->
+    
+    
     </section>
+
+    <div class="soundbar"> 
+        <!-- ----------------------------Audio de fundo--------------------------------- -->
+
+    <audio autoplay controls loop=infinite muted>
+        
+        <source src="/templates/rudhy/assets/sound/CocoRosie - Fairy Paradise Cutted.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- ----------------------------FIM do Audio de fundo--------------------------------- -->
+    </div>
+    
+
+
     <div class="album bg-principal" id="rudhy">
+        
         <div class="container">
+
+            
 
         <div class="row">
             <div class="col-md-4">
