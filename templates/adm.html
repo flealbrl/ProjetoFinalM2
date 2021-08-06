@@ -26,7 +26,7 @@
     {% endwith %}
 
     
-        {% if portifolios =='' %}
+        {% if portifolio =='' %}
         <form action='/new' method="POST">
             <h1>Cadastre um novo projeto</h1>
             {% else %}
@@ -36,22 +36,22 @@
 
 
                 <label for="nome">Nome</label>
-                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" value="{{portifolios.nome}}">
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" value="{{portifolio.nome}}">
 
                 <label for="imagem">Imagem</label>
-                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{portifolios.imagem}}">
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{portifolio.imagem}}">
 
                 <label for="link">Video</label>
-                <input type="text" placeholder="Link do video" id="video" name="video" value="{{portifolios.video}}">
+                <input type="text" placeholder="Link do video" id="video" name="video" value="{{portifolio.video}}">
 
                 <label for="link">Autor</label>
                 <input type="text" placeholder="Escolha:  Antonio / Elisama / Fellipe / Rudhy / Marcelo" id="autor"
-                    name="autor" required value="{{portifolios.autor}}">
+                    name="autor" required value="{{portifolio.autor}}">
 
                 <label for="descricao">Descrição</label>
                 <textarea name="descricao" id="descricao" cols="30" rows="10"
-                    placeholder="Digite a descrição do projeto">{{portifolios.descricao}}</textarea>
-                {% if portifolios =='' %}
+                    placeholder="Digite a descrição do projeto">{{portifolio.descricao}}</textarea>
+                {% if portifolio =='' %}
                 <button type="submit">Enviar</button>
                 {% else %}
                 <button type="submit">Atualizar</button>

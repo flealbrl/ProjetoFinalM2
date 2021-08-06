@@ -61,7 +61,7 @@ def adm():
         flash('Fação o login antes')
         return redirect('/login')
     portifolio = Portifolio.query.all()
-    return render_template('adm.html', portifolio=portifolio, portifolios='')
+    return render_template('adm.html', portifolio=portifolio)
     # if 'usuario_logado' not in session or session ['usuario_logado']==None:
     #    flash('Faça o login antes de acessar o painel administrativo')
     #    return redirect('/login')
@@ -89,7 +89,7 @@ def new(): # new definido no formulario de inclusao na pagina adm
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-   portifolios = Portifolio.query.all()
+   portifolio = Portifolio.query.all()
    if request.method == "POST": # Se a requisição for um POST, faça:
       # Alteração de todos os campos de projetoEdit selecionado no get id
       portifolio.nome = request.form['nome']
@@ -100,7 +100,7 @@ def edit(id):
       db.session.commit() # Confirma a operação
       return redirect('/adm') #Redireciona para a rota adm
    # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
-   return render_template('adm.html', portifolio=portifolio, portifolios = portifolios) 
+   return render_template('adm.html', portifolio=portifolio) 
 
 #### DELETAR ####
 @app.route('/delete/<id>') 
