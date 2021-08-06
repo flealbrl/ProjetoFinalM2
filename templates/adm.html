@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/css/adm.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Portifolio | ADM</title>
 </head>
 
 <body id="adm">
-       
+
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul class=flashes>
@@ -25,63 +25,76 @@
     {% endif %}
     {% endwith %}
 
-    <form action='/new' method="POST">
+    
+        {% if portifolios =='' %}
+        <form action='/new' method="POST">
+            <h1>Cadastre um novo projeto</h1>
+            {% else %}
+            <form action='/edit/{{portifolio.id}}' method="POST">
+            <h1>Atualize o projeto</h1>
+            {% endif %}
 
-        <h1>Cadastre um novo projeto</h1>
 
-        <label for="nome">Nome</label>
-        <input type="text" placeholder="Nome do projeto" id="nome" name="nome">
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" value="{{portifolios.nome}}">
 
-        <label for="imagem">Imagem</label>
-        <input type="text" placeholder="Link da imagem" id="imagem" name="imagem">
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{portifolios.imagem}}">
 
-        <label for="link">Video</label>
-        <input type="text" placeholder="Link do video" id="video" name="video">
+                <label for="link">Video</label>
+                <input type="text" placeholder="Link do video" id="video" name="video" value="{{portifolios.video}}">
 
-        <label for="link">Autor</label>
-        <input type="text" placeholder="Escolha:  Antonio / Elisama / Fellipe / Rudhy / Marcelo" id="autor" name="autor" required>
+                <label for="link">Autor</label>
+                <input type="text" placeholder="Escolha:  Antonio / Elisama / Fellipe / Rudhy / Marcelo" id="autor"
+                    name="autor" required value="{{portifolios.autor}}">
 
-        <label for="descricao">Descrição</label>
-        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Digite a descrição do projeto"></textarea>
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto">{{portifolios.descricao}}</textarea>
+                {% if portifolios =='' %}
+                <button type="submit">Enviar</button>
+                {% else %}
+                <button type="submit">Atualizar</button>
+                {% endif %}
 
-        <button type="submit">Enviar</button>
+            </form>
 
-    </form>
+        <table>
 
-    <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>IMAGEM</th>
+                    <th>VÍDEO</th>
+                    <th>AUTOR</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>AÇÕES</th>
 
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NOME</th>
-                <th>IMAGEM</th>
-                <th>VÍDEO</th>
-                <th>AUTOR</th>
-                <th>DESCRIÇÃO</th>
-                <th>AÇÕES</th>
+                </tr>
+            </thead>
 
-            </tr>
-        </thead>
+            <tbody>
+                {% for p in portifolio %}
+                <tr>
+                    <td>{{p.id}}</td>
+                    <td>{{p.nome}}</td>
+                    <td><a href="{{p.imagem}}" target="_blank">{{p.imagem}}</a></td>
+                    <td><a herf="{{p.video}}" target="_blank">{{p.video}}</a></td>
+                    <td>{{p.autor}}</td>
+                    <td>{{p.descricao}}</td>
+                    <td>
+                        <a href="/delete/{{p.id}}">Apagar</a>
+                        <a href="/edit/{{p.id}}">Editar</a>
 
-        <tbody>
-            {% for p in portifolio %}
-            <tr>
-                <td>{{p.id}}</td>
-                <td>{{p.nome}}</td>
-                <td>{{p.imagem}}</td>
-                <td>{{p.video}}</td>
-                <td>{{p.autor}}</td>
-                <td>{{p.descricao}}</td>
-                <td>
-                    <a href="/delete/{{p.id}}">Apagar</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
 
-    </table>
+        </table>
 
-    <script src="../static/js/adm.js"></script>
+        <script src="../static/js/adm.js"></script>
 
 
 </body>
