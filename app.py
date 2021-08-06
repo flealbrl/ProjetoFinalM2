@@ -112,25 +112,25 @@ def delete(id):
 
 
 #######
-@app.route('/antonio') # renderiza a pagina principal(rota)
+@app.route('/antonio') # renderiza a pagina (rota)
 def antonio():
     # portifolio = Portifolio.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%antonio%')) #faz o filtro 
     return render_template('antonio.html', portifolio=portifolio )
 
-@app.route('/elisama') # renderiza a pagina principal(rota)
+@app.route('/elisama') # renderiza a pagina (rota)
 def elisama():
     # projetos = Projeto.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%Elisama%')) #faz o filtro
     return render_template('elisama.html', portifolio=portifolio)
 
-@app.route('/fellipe') # renderiza a pagina principal(rota)
+@app.route('/fellipe') # renderiza a pagina(rota)
 def fellipe():
     # projetos = Projeto.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%fellipe%')) #faz o filtro
     return render_template('fellipe.html', portifolio=portifolio)
 
-@app.route('/marcelo') # renderiza a pagina principal(rota)
+@app.route('/marcelo') # renderiza a pagina (rota)
 def marcelo():
     # projetos = Projeto.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%marcelo%')) #faz o filtro

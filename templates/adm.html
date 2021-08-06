@@ -14,7 +14,7 @@
 </head>
 
 <body id="adm">
-   
+       
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul class=flashes>
@@ -52,12 +52,13 @@
 
         <thead>
             <tr>
-                <th>#ID</th>
-                <th>#NOME</th>
-                <th>#IMAGEM</th>
-                <th>#VÍDEO</th>
-                <th>#AUTOR</th>
-                <th id='descricao'>#DESCRIÇÃO</th>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>IMAGEM</th>
+                <th>VÍDEO</th>
+                <th>AUTOR</th>
+                <th>DESCRIÇÃO</th>
+                <th>AÇÕES</th>
 
             </tr>
         </thead>
@@ -70,7 +71,10 @@
                 <td>{{p.imagem}}</td>
                 <td>{{p.video}}</td>
                 <td>{{p.autor}}</td>
-                <td id='descricao'>{{p.descricao}}</td>
+                <td>{{p.descricao}}</td>
+                <td>
+                    <a href="/delete/{{p.id}}">Apagar</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
