@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href='style.css'>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Portifolio | ADM</title>
 </head>
 
-<body>
+<body id="adm">
    
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -39,8 +42,7 @@
         <input type="text" placeholder="Seu nome" id="autor" name="autor" required>
 
         <label for="descricao">Descrição</label>
-        <textarea name="descricao" id="descricao" cols="30" rows="10"
-        placeholder="Digite a descrição do projeto"></textarea>
+        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Digite a descrição do projeto"></textarea>
 
         <button type="submit">Enviar</button>
 
@@ -63,7 +65,7 @@
         <tbody>
             {% for p in portifolio %}
             <tr>
-                <th>{{p.id}}</th>
+                <td>{{p.id}}</td>
                 <td>{{p.nome}}</td>
                 <td>{{p.imagem}}</td>
                 <td>{{p.video}}</td>

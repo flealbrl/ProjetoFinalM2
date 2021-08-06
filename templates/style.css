@@ -1,5 +1,12 @@
-html {
+* {
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+}
+
+body#adm{
+    background: url('/static/img/bkadm.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 form{
@@ -11,13 +18,14 @@ form{
     position: relative;
     box-shadow: rgba(149, 157, 165, .5) 0px 8px 24px;
     border-radius: 1rem;
+    margin-bottom: 5rem;
 }
     
 form h1{
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     text-align: center;
-    color: #0066ff ;
-    font-size: 2rem;
+    color: #000000 ;
+    font-size: 3rem;
 }
     
 form input, textarea{
@@ -35,45 +43,45 @@ form label {
 }
     
 form button{
-    border: 1px solid #0066ff;
-    background-color: #fff;
-    color: #0066ff;
-    font-size: 1rem;
+    border: 1px solid #000000;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 1.3rem;
     font-weight: 600;
     padding: 1rem;
-    border-radius: 0.5rem;
     display: block;
     margin: auto;
+    border-radius: .25rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    transition: #fff 0.4s ease-in-out;
-    width: 40%;
+    transition-duration: 0.4s;
+    width: 30%;
 }
     
 form button:hover{
-    background-color: #0066ff;
-    color: #fff;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #bbbbbb;
+    color: rgb(0, 0, 0);
 }
-
-
 
 table{
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     border-spacing: 0;
-    padding: 3rem;
     background-color: #fff;
     width: 65%;
     box-shadow: rgba(149, 157, 165, .5) 0px 8px 24px;
     border-radius: 1rem;
 }
 
-table tr,td{
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 3rem;
-    
+table thead th{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+table tbody td{
+    text-align: center;
+    padding: 1.5rem;  
 }
