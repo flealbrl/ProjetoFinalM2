@@ -88,9 +88,9 @@ def new(): # new definido no formulario de inclusao na pagina adm
 #### EDITAR ####
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
-   portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-   portifolio = Portifolio.query.all()
-   if request.method == "POST": # Se a requisição for um POST, faça:
+    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
+#    portifolio = Portifolio.query.all()
+    if request.method == "POST": # Se a requisição for um POST, faça:
       # Alteração de todos os campos de projetoEdit selecionado no get id
       portifolio.nome = request.form['nome']
       portifolio.descricao = request.form['descricao']
@@ -99,8 +99,8 @@ def edit(id):
       portifolio.autor = request.form['autor']
       db.session.commit() # Confirma a operação
       return redirect('/adm') #Redireciona para a rota adm
-   # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
-   return render_template('adm.html', portifolio=portifolio) 
+        # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
+    return render_template('adm.html', portifolio=portifolio) 
 
 #### DELETAR ####
 @app.route('/delete/<id>') 
