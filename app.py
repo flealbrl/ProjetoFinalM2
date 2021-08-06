@@ -88,7 +88,6 @@ def new(): # new definido no formulario de inclusao na pagina adm
 #### EDITAR ####
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
-<<<<<<< HEAD
    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
    portifolios = Portifolio.query.all()
    if request.method == "POST": # Se a requisição for um POST, faça:
@@ -102,37 +101,15 @@ def edit(id):
       return redirect('/adm') #Redireciona para a rota adm
    # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
    return render_template('adm.html', portifolio=portifolio, portifolios = portifolios) 
-=======
-    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-    portifolio = Portifolio.query.all()
-    if request.method == "POST": # Se a requisição for um POST, faça:
-        # Alteração de todos os campos de projetoEdit selecionado no get id
-        portifolio.nome = request.form['nome']
-        portifolio.descricao = request.form['descricao']
-        portifolio.imagem = request.form['imagem']
-        portifolio.video = request.form['video']
-        portifolio.autor = request.form['autor']
-        db.session.commit() # Confirma a operação
-        return redirect('/adm') #Redireciona para a rota adm
-    # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
-    return render_template('adm.html', portifolio=portifolio) 
->>>>>>> 79462f3b0c9f62f321688555accf90e50e0d83d6
 
 #### DELETAR ####
 @app.route('/delete/<id>') 
 def delete(id):
-<<<<<<< HEAD
    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
    db.session.delete(portifolio) # Apaga o projeto no banco de dados
    db.session.commit() # Confirma a operação
    flash('Item deletado com sucesso')
    return redirect('/adm') #Redireciona para a rota adm
-=======
-    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-    db.session.delete(portifolio) # Apaga o projeto no banco de dados
-    db.session.commit() # Confirma a operação
-    return redirect('/adm') #Redireciona para a rota adm
->>>>>>> 79462f3b0c9f62f321688555accf90e50e0d83d6
 
 
 #######
