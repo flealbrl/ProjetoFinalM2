@@ -85,9 +85,26 @@ table thead th{
 table tbody td{
     text-align: center;
     padding: 1.5rem;  
+    border: solid .2px rgba(0, 0, 0, 0.200);
+    border-radius: 2rem;
 }
 
 table thead th#descricao{
     padding-left: 15rem;
     padding-right: 15rem;
+}
+
+table tbody tr td a#apagar{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 3rem;
+    color: rgb(145, 2, 2);
+    text-decoration: none;
+}
+
+table tbody tr td a#editar{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(1, 173, 9);
+    text-decoration: none;
 }
