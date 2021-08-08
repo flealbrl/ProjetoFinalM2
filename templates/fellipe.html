@@ -52,12 +52,28 @@
         border-radius: 1rem;
     }
 
+    a.navbar-brand{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .bgnavbar {
+        background-color: #d37306ad;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    div.soundbar{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
     footer.blog-footer {
         font-size: 2rem;
         font-weight: 700;
-
         background-color: rgba(255, 255, 255, 0.699);
-        border-radius: .2rem;
+        border-radius: .9rem;
         padding: .6rem;
     }
 
@@ -67,7 +83,7 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light  bgnavbar">
         <a class="navbar-brand" href="#">👾 Fellipe</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,6 +157,11 @@
                 <p><a href="#">Voltar ao topo</a></p>
             </footer>
 
+            <div class="soundbar">
+                <audio controls autoplay loop=infinite>
+                    <source src="../static/sound/sound-meme.mp3" type="audio/wav">
+                </audio>
+            </div>
 </body>
 
 </html>
