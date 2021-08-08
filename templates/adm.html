@@ -78,9 +78,9 @@
                     <td id="video" ><a herf="{{p.video}}" target="_blank">{{p.video}}</a></td>
                     <td id="autor" >{{p.autor}}</td>
                     <td id="descricao" >{{p.descricao}}</td>
-                    <td>
-                        <a id='editar' href="/edit/{{p.id}}">✏️ Editar</a>
-                        <a id='apagar' href="/delete/{{p.id}}">🗑️ Apagar</a>
+                    <td id="acoes">
+                        <a id='editar' href="/edit/{{p.id}}">✏️Editar</a>
+                        <a id='apagar' href="/delete/{{p.id}}">🗑️Apagar</a>
                     </td>
                 </tr>
                 {% endfor %}
