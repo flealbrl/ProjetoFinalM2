@@ -72,12 +72,12 @@
             <tbody>
                 {% for p in portifolio %}
                 <tr>
-                    <td>{{p.id}}</td>
-                    <td>{{p.nome}}</td>
-                    <td><a href="{{p.imagem}}" target="_blank">{{p.imagem}}</a></td>
-                    <td><a herf="{{p.video}}" target="_blank">{{p.video}}</a></td>
-                    <td>{{p.autor}}</td>
-                    <td>{{p.descricao}}</td>
+                    <td id="id" >{{p.id}}</td>
+                    <td id="nome" >{{p.nome}}</td>
+                    <td id="imagem" ><a href="{{p.imagem}}" target="_blank">{{p.imagem}}</a></td>
+                    <td id="video" ><a herf="{{p.video}}" target="_blank">{{p.video}}</a></td>
+                    <td id="autor" >{{p.autor}}</td>
+                    <td id="descricao" >{{p.descricao}}</td>
                     <td>
                         <a id='editar' href="/edit/{{p.id}}">✏️ Editar</a>
                         <a id='apagar' href="/delete/{{p.id}}">🗑️ Apagar</a>

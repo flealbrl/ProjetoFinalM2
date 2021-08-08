@@ -83,16 +83,54 @@ table thead th{
 }
 
 table tbody td{
-    text-align: center;
-    padding: 1.5rem;  
+    text-align: center; 
     border: solid .2px rgba(0, 0, 0, 0.200);
     border-radius: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+table tbody td#id{
+    text-align: center;
+    padding-left: 1rem;    
+    padding-right: 1rem; 
+}
+
+table tbody td#nome{
+    text-align: center;
+    padding-left: 2rem;    
+    padding-right: 2rem; 
+}
+
+table tbody td#imagem{
+    text-align: center;
+    padding-left: 3rem;    
+    padding-right: 3rem; 
+}
+
+table tbody td#video{
+    text-align: center;
+    padding-left: 3rem;    
+    padding-right: 3rem; 
+}
+
+table tbody td#autor{
+    text-align: center;
+    padding-left: 3rem;    
+    padding-right: 3rem; 
+}
+
+table tbody td#descricao{
+    text-align: center;
+    padding-left: 5rem;    
+    padding-right: 5rem; 
 }
 
 table tbody tr td a#apagar{
+    text-align: center;
     font-size: 20px;
     font-weight: 500;
-    padding-left: 3rem;
+    margin: 2rem;
     color: rgb(145, 2, 2);
     text-decoration: none;
 }
@@ -100,6 +138,7 @@ table tbody tr td a#apagar{
 table tbody tr td a#editar{
     font-size: 20px;
     font-weight: 500;
+    margin: 2rem;
     color: rgb(1, 173, 9);
     text-decoration: none;
 }
