@@ -6,7 +6,7 @@ from sqlalchemy.orm import query
 app = Flask(__name__)
 app.secret_key = 'project2'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fdfxmirf:i2yUyPRIytvSLC2DAUUm35C8KhTr838l@kesavan.db.elephantsql.com/fdfxmirf'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xaslckdf:zLwEe5uhKhtv_bR-JEV-ShwKpdOCgJBU@kesavan.db.elephantsql.com/xaslckdf'
 db = SQLAlchemy(app)
 
 class Portifolio(db.Model):
@@ -137,6 +137,7 @@ def fellipe():
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%fellipe%')) #faz o filtro
     return render_template('fellipe.html', portifolio=portifolio)
 
+
 @app.route('/rudhy') # renderiza a pagina principal(rota)
 def rudhy():
     # projetos = Projeto.query.all()
@@ -146,7 +147,10 @@ def rudhy():
 
 @app.route('/sobre') # renderiza a pagina (rota)
 def sobre():
-    return render_template('sobre.html')
+    # portifolio = Portifolio.query.all()
+    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
+    return render_template('sobre.html', portifolio=portifolio )
+
 
 
 
