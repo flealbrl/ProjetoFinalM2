@@ -132,6 +132,13 @@ def fellipe():
     return render_template('fellipe.html', portifolio=portifolio)
 
 
+@app.route('/sobre') # renderiza a pagina (rota)
+def sobre():
+    # portifolio = Portifolio.query.all()
+    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
+    return render_template('sobre.html', portifolio=portifolio )
+
+
 # -------------------------------EXCLUIR----------------------------------------
 
 @app.route('/marcelo') # renderiza a pagina (rota)
