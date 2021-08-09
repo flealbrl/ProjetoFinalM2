@@ -100,16 +100,22 @@ def edit(id):
         db.session.commit() # Confirma a operação
         return redirect('/adm') #Redireciona para a rota adm
         # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
-    return render_template('adm.html', portifolio=portifolio) 
+    return render_template('edit.html', portifolio=portifolio) 
+
+
+@app.route("/<id>")
+def get_by_id(id):
+    portifolio = Portifolio.query.get(id)
+    return render_template('delete.html', portifolio=portifolio)
 
 #### DELETAR ####
-@app.route('/delete/<id>') 
+@app.route('/delete/<id>')
 def delete(id):
-    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-    db.session.delete(portifolio) # Apaga o projeto no banco de dados
-    db.session.commit() # Confirma a operação
-    flash('Item deletado com sucesso')
-    return redirect('/adm') #Redireciona para a rota adm
+    portifolio = Portifolio.query.get(id)
+    db.session.delete(portifolio)
+    db.session.commit()
+    flash('Item Deletado com sucesso!')
+    return redirect('/adm')
 
 
 #######
@@ -131,30 +137,16 @@ def fellipe():
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%fellipe%')) #faz o filtro
     return render_template('fellipe.html', portifolio=portifolio)
 
-
-@app.route('/sobre') # renderiza a pagina (rota)
-def sobre():
-    # portifolio = Portifolio.query.all()
-    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
-    return render_template('sobre.html', portifolio=portifolio )
-
-
-# -------------------------------EXCLUIR----------------------------------------
-
-@app.route('/marcelo') # renderiza a pagina (rota)
-def marcelo():
-    # projetos = Projeto.query.all()
-    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%marcelo%')) #faz o filtro
-    return render_template('marcelo.html', portifolio=portifolio)
-
-# -------------------------------EXCLUIR----------------------------------------
-
-
 @app.route('/rudhy') # renderiza a pagina principal(rota)
 def rudhy():
     # projetos = Projeto.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%rudhy%')) #faz o filtro
     return render_template('rudhy.html', portifolio=portifolio)
+
+
+@app.route('/sobre') # renderiza a pagina (rota)
+def sobre():
+    return render_template('sobre.html')
 
 
 
