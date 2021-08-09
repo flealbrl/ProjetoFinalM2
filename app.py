@@ -139,15 +139,6 @@ def sobre():
     return render_template('sobre.html', portifolio=portifolio )
 
 
-# -------------------------------EXCLUIR----------------------------------------
-
-@app.route('/marcelo') # renderiza a pagina (rota)
-def marcelo():
-    # projetos = Projeto.query.all()
-    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%marcelo%')) #faz o filtro
-    return render_template('marcelo.html', portifolio=portifolio)
-
-# -------------------------------EXCLUIR----------------------------------------
 
 
 @app.route('/rudhy') # renderiza a pagina principal(rota)
