@@ -137,17 +137,21 @@ def fellipe():
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%fellipe%')) #faz o filtro
     return render_template('fellipe.html', portifolio=portifolio)
 
+
+@app.route('/sobre') # renderiza a pagina (rota)
+def sobre():
+    # portifolio = Portifolio.query.all()
+    portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
+    return render_template('sobre.html', portifolio=portifolio )
+
+
+
+
 @app.route('/rudhy') # renderiza a pagina principal(rota)
 def rudhy():
     # projetos = Projeto.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%rudhy%')) #faz o filtro
     return render_template('rudhy.html', portifolio=portifolio)
-
-
-@app.route('/sobre') # renderiza a pagina (rota)
-def sobre():
-    return render_template('sobre.html')
-
 
 
 if __name__ == '__main__':
