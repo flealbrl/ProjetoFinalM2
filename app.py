@@ -154,12 +154,6 @@ def rudhy():
     return render_template('rudhy.html', portifolio=portifolio)
 
 
-@app.route('/sobre') # renderiza a pagina (rota)
-def sobre():
-    return render_template('sobre.html')
-
-
-
 if __name__ == '__main__':
     db.create_all() #cria o banco de dados 
     app.run(debug=True)
