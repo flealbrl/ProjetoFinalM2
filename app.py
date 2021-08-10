@@ -64,10 +64,6 @@ def adm():
     # portifolio = Portifolio.query.all() #vai ler tudo, select * from projetos
     # return render_template('adm.html', portifolio= portifolio, portifolio='')
 
-
-
-
-
 ### CRIAR/ADD ITEM
 @app.route('/new', methods=['GET', 'POST'])
 def new(): # new definido no formulario de inclusao na pagina adm
@@ -85,35 +81,23 @@ def new(): # new definido no formulario de inclusao na pagina adm
         flash('Item Adicionado com suceso!')
         return redirect('/adm') 
 
-
-
-
-
-
-#### EDITAR ####
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
-    portifolio = Portifolio.query.get(id) # Busca um projeto no banco através do id
-#    portifolio = Portifolio.query.all()
-    if request.method == "POST": # Se a requisição for um POST, faça:
-    # Alteração de todos os campos de projetoEdit selecionado no get id
+    portifolio = Portifolio.query.get(id)
+    if request.method == 'POST':
         portifolio.nome = request.form['nome']
         portifolio.descricao = request.form['descricao']
         portifolio.imagem = request.form['imagem']
         portifolio.video = request.form['video']
         portifolio.autor = request.form['autor']
-        db.session.commit() # Confirma a operação
-        return redirect('/adm') #Redireciona para a rota adm
-        # Renderiza a página adm.html passando o projetoEdit (projeto a ser editado)
+        db.session.commit()
+        return redirect('/')
     return render_template('edit.html', portifolio=portifolio) 
+
 @app.route("/<id>")
 def get_by_id(id):
     portifolio = Portifolio.query.get(id)
     return render_template('delete.html', portifolio=portifolio)
-
-
-
-
 
 #### DELETAR ####
 @app.route('/delete/<id>')
@@ -149,10 +133,6 @@ def sobre():
     # portifolio = Portifolio.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
     return render_template('sobre.html', portifolio=portifolio )
-
-
-
-
 
 if __name__ == '__main__':
     db.create_all() #cria o banco de dados 

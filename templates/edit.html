@@ -8,13 +8,73 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Catalogo | Edit</title>
 </head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body{
+        background-image: url(../static/img/bkedit.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    body div.container.mt-5{
+        background: rgba(44, 44, 44, 0.700);
+        color: azure;
+        border-radius: 2rem;
+        padding: 3rem;
+    }
+
+    label.form-label{
+        font-size: 1.3rem;
+    }
+
+    button.btn.btn-primary{
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: black;
+    border: solid 1.2px rgb(0, 0, 0);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    }
+
+    button.btn.btn-primary:hover{
+    background-color: #80fd84; 
+    color: rgb(0, 0, 0);
+    }
+
+    button.btn.btn-primary-cancel{
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: black;
+    border: solid 1.2px rgb(0, 0, 0);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    }
+
+    button.btn.btn-primary-cancel:hover{
+    background-color: #fd8080; 
+    color: rgb(0, 0, 0);
+    }
+    
+
+</style>
 <body>
 
     <div class="container mt-5">
 
         <div class="row mb-5">
             <div class="col d-flex justify-content-center">
-                <h1>Editar Item</h1>
+                <h1>Edite o conteúdo do Card.</h1>
             </div>
         </div>
 
@@ -26,25 +86,23 @@
                         <input type="text" class="form-control" id="nome" name='nome' value='{{portifolio.nome}}'>
                     </div>
                     <div class="mb-3">
+                        <label for="marca" class="form-label">Descrição</label>
+                        <input type="text" class="form-control" id="descricao" name='descricao' value='{{portifolio.descricao}}'>
+                    </div>
+                    <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem</label>
                         <input type="text" class="form-control" id="imagem" name='imagem' value='{{portifolio.imagem}}'>
                     </div>
                     <div class="mb-3">
-                        <label for="video" class="form-label">Video</label>
-                        <input type="text" placeholder="Link do video" id="video" name="video" value='{{portifolio.video}'>
+                        <label for="valor" class="form-label">Vídeo</label>
+                        <input type="text" class="form-control" id="video" name='video' value='{{portifolio.video}}'>
                     </div>
                     <div class="mb-3">
-                        <label for="autor">Autor</label>
-                        <input type="text" placeholder="Escolha:  Antonio / Elisama / Fellipe / Rudhy" id="autor" name="autor" value='{{portifolio.autor}}' required >
-
+                        <label for="valor" class="form-label">Autor</label>
+                        <input type="text" class="form-control" id="autor" name='autor' value='{{portifolio.autor}}'>
                     </div>
-                    <div class="mb-3">
-                        <label for="descricao">Descrição</label>
-                    <textarea name="descricao" id="descricao" cols="30" rows="10"
-                    placeholder="Digite a descrição do projeto">{{portifolio.descricao}}</textarea>
-
-                    </div>
-                    <button type="submit" class="btn btn-primary">Atualizar</button>
+                    <button type="submit" href="/adm" class="btn btn-primary">Atualizar ✔️</button>
+                    <button href="/adm" class="btn btn-primary-cancel">Cancelar ❌</button>
                 </form>
             </div>
         </div>
