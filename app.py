@@ -91,7 +91,7 @@ def edit(id):
         portifolio.video = request.form['video']
         portifolio.autor = request.form['autor']
         db.session.commit()
-        return redirect('/')
+        return redirect('/adm')
     return render_template('edit.html', portifolio=portifolio) 
 
 @app.route("/<id>")
