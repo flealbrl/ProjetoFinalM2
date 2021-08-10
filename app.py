@@ -6,7 +6,7 @@ from sqlalchemy.orm import query
 app = Flask(__name__)
 app.secret_key = 'project2'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fdfxmirf:i2yUyPRIytvSLC2DAUUm35C8KhTr838l@kesavan.db.elephantsql.com/fdfxmirf'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://palcjjnu:rP9bpQXdLfJiUz92rdrEifnTmQcNJQ8U@kesavan.db.elephantsql.com/palcjjnu'
 db = SQLAlchemy(app)
 
 class Portifolio(db.Model):
@@ -28,6 +28,8 @@ def index():
     session['usuario_logado'] = None # sempre que for para rota principal, 'desloga' o usuario
     return render_template('index.html')
 #######
+
+
 @app.route('/login')
 def login():
     session['usuario_logado'] = None
@@ -46,6 +48,9 @@ def logout():
     session['usuario_logado'] = None
     return redirect('/login')
 #PAINEL ADMINISTRATIVO#
+
+
+
 @app.route('/adm')
 def adm():
     if 'usuario_logado' not in session or session ['usuario_logado']==None:
@@ -58,7 +63,12 @@ def adm():
     #    return redirect('/login')
     # portifolio = Portifolio.query.all() #vai ler tudo, select * from projetos
     # return render_template('adm.html', portifolio= portifolio, portifolio='')
-### create##### CRIAR/ADD ITEM
+
+
+
+
+
+### CRIAR/ADD ITEM
 @app.route('/new', methods=['GET', 'POST'])
 def new(): # new definido no formulario de inclusao na pagina adm
     if request.method == 'POST': # Verifica se o metodo recebido na requisição é POST
@@ -74,6 +84,12 @@ def new(): # new definido no formulario de inclusao na pagina adm
         db.session.commit() # Confirma a operação
         flash('Item Adicionado com suceso!')
         return redirect('/adm') 
+
+
+
+
+
+
 #### EDITAR ####
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
@@ -94,6 +110,10 @@ def edit(id):
 def get_by_id(id):
     portifolio = Portifolio.query.get(id)
     return render_template('delete.html', portifolio=portifolio)
+
+
+
+
 
 #### DELETAR ####
 @app.route('/delete/<id>')
@@ -129,6 +149,9 @@ def sobre():
     # portifolio = Portifolio.query.all()
     portifolio = Portifolio.query.filter(Portifolio.autor.ilike('%sobre%')) #faz o filtro 
     return render_template('sobre.html', portifolio=portifolio )
+
+
+
 
 
 if __name__ == '__main__':
