@@ -8,6 +8,42 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Catalogo | Delete </title>
 </head>
+<style>
+
+    
+    body div.container.mt-5 li#card{
+
+        text-decoration: none;
+        font-size: 1.3;
+        font-weight: 600;
+    }
+
+    body div.container.mt-5 li#desc{
+        text-decoration: none;
+        font-size: 1.2;
+        font-weight: 600;
+        margin-left: 2rem;
+    }
+
+    body div.container.mt-5 li#img{
+        text-decoration: none;
+        font-size: 1.2;
+        font-weight: 600;
+        margin-left: 2rem;
+    }
+
+    body div.container.mt-5 li#aut{
+        text-decoration: none;
+        font-size: 1.2;
+        font-weight: 600;
+        margin-left: 2rem;
+    }
+
+    
+    ul.list-group.list-group-flush{
+        padding: .4rem;
+    }
+</style>
 <body>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -30,13 +66,11 @@
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
-                    <div class="card-header">
-                      {{portifolio.nome}}
-                    </div>
+                    <div class="card-header"><li id="card">Card</li>{{portifolio.nome}}</div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">{{portifolio.descricao}}</li>
-                      <li class="list-group-item">{{portifolio.imagem}}</li>
-                      <li class="list-group-item">{{portifolio.autor}}</li>
+                      <li class="list-group-item"><li id="desc">Descrição</li>{{portifolio.descricao}}</li>
+                      <li class="list-group-item"><li id="img">Imagem</li>{{portifolio.imagem}}</li>
+                      <li class="list-group-item"><li id="aut">Autor</li>{{portifolio.autor}}</li>
                     </ul>
                   </div>
             </div>
