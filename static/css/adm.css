@@ -103,34 +103,35 @@ form button:hover{
 }
 
 table{
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;   
     border-collapse: collapse;
     border-spacing: 0;
     background-color: #fff;
-    width: 65%;
+    width: 100%;
     box-shadow: rgba(149, 157, 165, .5) 0px 8px 24px;
     border-radius: 1rem;
+        
 }
 
 table thead th{
     text-align: center;
     padding: 1.5rem;
+    width: 10px;
 }
 
 table tbody td{
     text-align: center; 
     border: solid .2px rgba(0, 0, 0, 0.200);
     border-radius: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
 
 
 table tbody td#id{
     text-align: center;
-    padding-left: 1rem;    
-    padding-right: 1rem; 
+    width: 10%;
 }
 
 table tbody td#nome{
@@ -157,4 +158,19 @@ table tbody tr td a#editar{
     font-weight: 500;
     color: rgb(1, 173, 9);
     text-decoration: none;
+}
+
+table tbody td#imagem{
+    font-size: 10px;
+    text-align: justify;
+    padding-left: 1rem;    
+    padding-right: 1rem; 
+}
+
+table tbody td#video{
+    
+    font-size: 10px;
+    text-align: justify;
+    padding-left: 1rem;    
+    padding-right: 1rem; 
 }
