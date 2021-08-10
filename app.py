@@ -6,7 +6,7 @@ from sqlalchemy.orm import query
 app = Flask(__name__)
 app.secret_key = 'project2'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://palcjjnu:rP9bpQXdLfJiUz92rdrEifnTmQcNJQ8U@kesavan.db.elephantsql.com/palcjjnu'
+app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///projetofinal.sqlite3'
 db = SQLAlchemy(app)
 
 class Portifolio(db.Model):
