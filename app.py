@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, flash, session
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import query
-
+#comentario
 app = Flask(__name__)
 app.secret_key = 'project2'
 
