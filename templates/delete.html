@@ -24,7 +24,7 @@
         font-weight: 600;
         margin-left: 2rem;
     }
-
+    
     body div.container.mt-5 li#img{
         text-decoration: none;
         font-size: 1.2;
@@ -39,10 +39,11 @@
         margin-left: 2rem;
     }
 
-    
     ul.list-group.list-group-flush{
         padding: .4rem;
     }
+
+
 </style>
 <body>
     {% with messages = get_flashed_messages() %}
@@ -69,8 +70,9 @@
                     <div class="card-header"><li id="card">Card</li>{{portifolio.nome}}</div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><li id="desc">Descrição</li>{{portifolio.descricao}}</li>
-                      <li class="list-group-item"><li id="img">Imagem</li>{{portifolio.imagem}}</li>
                       <li class="list-group-item"><li id="aut">Autor</li>{{portifolio.autor}}</li>
+                      <li class="list-group-item"><li id="img">Imagem</li><img src="{{portifolio.imagem}}" id='imgft' alt="img"></li>
+
                     </ul>
                   </div>
             </div>
